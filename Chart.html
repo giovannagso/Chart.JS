@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementando o Chartjs</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+    <div>
+        <canvas id="myChart1"></canvas>
+    </div>
+</body>
+
+
+<script>
+    const labels = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+    ];
+  
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'My First dataset',
+        backgroundColor: 'rgb(255, 0, 0)',
+        borderColor: 'rgb(255, 0, 0)',
+        data: [0, 10, 5, 2, 20, 30, 45],
+      },
+     {
+      label: 'My First dataset',
+        backgroundColor: 'rgb(0, 0, 255)',
+        borderColor: 'rgb(0, 0, 255)',
+        data: [0+10, 10+10, 5+10, 2+10, 20+10, 30+10, 45+10],
+     }]
+     };
+  
+    const config = {
+      type: 'line',
+      data: data,
+      options: {}
+    };
+    const horario = [
+      '12:00',
+      '13:00',
+      '14:00',
+      '15:00',
+      '16:00',
+      '17:00',
+    ];
+  
+    const data1 = {
+      labels: horario,
+      datasets: [{
+        label: 'My First dataset',
+        backgroundColor: 'rgb(255, 0, 0)',
+        borderColor: 'rgb(255, 0, 0)',
+        data: [30, 28, 25, 22, 23],
+      },
+     {
+      label: 'My First dataset',
+        backgroundColor: 'rgb(0, 0, 255)',
+        borderColor: 'rgb(0, 0, 255)',
+        data: [0,82,80,85,80,83],
+     }]
+     };
+  
+    const config1 = {
+      type: 'line',
+      data: data1,
+      options: {}
+    };
+  </script>
+  
+  <script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+    const myChart1 = new Chart(
+      document.getElementById('myChart1'),
+      config1
+    );
+  </script>
+   
+</html>
